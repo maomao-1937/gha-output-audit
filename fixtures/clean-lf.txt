@@ -1,0 +1,5 @@
+result=ok
+details<<END
+line one
+line two
+END

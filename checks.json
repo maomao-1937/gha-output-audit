@@ -1,0 +1,12 @@
+[
+  {"args":["gha_output_audit.py","fixtures/clean-lf.txt","--json"],"exit":0},
+  {"args":["gha_output_audit.py","fixtures/clean-crlf.txt","--json"],"exit":0},
+  {"args":["gha_output_audit.py","fixtures/duplicate.txt","--json"],"exit":1},
+  {"args":["gha_output_audit.py","fixtures/missing-delimiter.txt","--json"],"exit":1},
+  {"args":["gha_output_audit.py","fixtures/closing-no-newline.txt","--json"],"exit":0},
+  {"args":["gha_output_audit.py","fixtures/body-no-newline.txt","--json"],"exit":1},
+  {"args":["gha_output_audit.py","fixtures/clean-lf.txt","--expect-name","result","--expect-name","details","--json"],"exit":0},
+  {"args":["gha_output_audit.py","fixtures/clean-lf.txt","--expect-name","result","--json"],"exit":1},
+  {"args":["gha_output_audit.py","fixtures/clean-lf.txt","--max-bytes","4","--json"],"exit":2},
+  {"args":["gha_output_audit.py","fixtures/invalid-utf8.bin","--json"],"exit":2}
+]
